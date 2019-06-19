@@ -15,7 +15,7 @@ module.exports = function(app) {
 
         var newFriend = req.body;
 
-        // find the difference between the new friend and the friends list
+        // finds the difference between the new friend and the friends list
         var matches = [];
         const count = friends.length;
         for(var i = 0; i < count; i++) {
