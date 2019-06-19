@@ -1,7 +1,7 @@
 {
   "name": "friendfinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "find a friend match ",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,13 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/smart79/FriendFinder.git"
   },
-  "author": "",
+  "author": "Chris Martinez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/smart79/FriendFinder/issues"
   },
   "homepage": "https://github.com/smart79/FriendFinder#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "path": "^0.12.7"
   }
 }
