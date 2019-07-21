@@ -1,14 +1,16 @@
 //Dependencies
 var express = require("express");
+
+
 var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("app/public"));
+
 //Router
-require("./app/routing/apiRoutes.js")(app);
-require("./app/routing/htmlRoutes.js")(app);
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 // Starts the server to begin listening
 app.listen(PORT, function () {
