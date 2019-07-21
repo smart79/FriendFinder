@@ -1,14 +1,13 @@
-var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
-var htmlRouter = express.Router();
+var path = require("path");
 
-htmlRouter.get('/survey', (req, res) => {
-    res.sendFile(path.join(__dirname, '/survey.html'));
-});
+module.exports = function (app) {
 
-htmlRouter.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, '/home.html'));
-});
+    app.get("/survey", function (req, res) {
+        res.sendFile(path.join(__dirname, "/../public/survey.html"));
+    });
 
-module.exports = htmlRouter;
+    app.get("*", function (req, res) {
+        res.sendFile(path.join(__dirname, "/../public/home.html"));
+    });
+
+};
