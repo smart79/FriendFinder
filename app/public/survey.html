@@ -46,7 +46,7 @@
       <option value="5">5 (Strongly Agree)</option>
     </select>
 
-    <h3><strong>Question 2</strong></h3>
+   <h3><strong>Question 2</strong></h3>
     <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
     <select class="chosen-select" id="q2">
       <option value=""></option>
@@ -180,7 +180,7 @@
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
-          <img id="match-img" src="" alt="match" style="max-width: 400px;">
+          <img id="match-img" src="images/" alt="match" style="max-width: 400px;">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -248,10 +248,10 @@
             $("#q10").val()
           ]
         };
-        console.log(userData)
+        console.log("User Data:", userData)
         // AJAX post the data to the friends API.
         $.post("/api/friends", userData, function (data) {
-          console.log(data);
+          console.log("API Response:", data);
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
@@ -262,6 +262,8 @@
         alert("Please fill out all fields before submitting!");
       }
     });
+
+
   </script>
 
 </body>
