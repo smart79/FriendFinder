@@ -1,7 +1,7 @@
 var friends = [
   {
     name: "Annie Wilkes",
-    photo: "images/Annie.png",
+    photo: "./images/Annie.png",
     scores: [
       5,
       1,
@@ -17,7 +17,7 @@ var friends = [
   },
   {
     name: "Jason Voorhees",
-    photo: "images/jason.png",
+    photo: "./images/jason.png",
     scores: [
       5,
       5,
@@ -33,7 +33,7 @@ var friends = [
   },
   {
     name: "Freddie Krueger",
-    photo: "images/Freddie.jpg",
+    photo: "./images/Freddie.jpg",
     scores: [
       3,
       3,
@@ -49,7 +49,7 @@ var friends = [
   },
   {
     name: "Michael Myers",
-    photo: "images/Halloween.jpg",
+    photo: "./images/Halloween.jpg",
     scores: [
       2,
       3,
@@ -65,7 +65,7 @@ var friends = [
   },
   {
     name: "Carrie White",
-    photo: "images/IMG_0252.jpg",
+    photo: "./images/IMG_0252.jpg",
     scores: [
       1,
       2,

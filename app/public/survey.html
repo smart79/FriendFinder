@@ -180,7 +180,7 @@
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
-          <img id="match-img" src="images/" alt="match" style="max-width: 400px;">
+          <img id="match-img" src="" alt="match" style="max-width: 400px;">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -251,10 +251,14 @@
         console.log("User Data:", userData)
         // AJAX post the data to the friends API.
         $.post("/api/friends", userData, function (data) {
-          console.log("API Response:", data);
+
+          console.log("API Response:", data);// Check entire response
+          console.log("Image path received:", data.photo); // Check the image path
+
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
+
           // Show the modal with the best match
           $("#results-modal").modal("toggle");
         });
