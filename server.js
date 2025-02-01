@@ -9,8 +9,9 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+console.log("Serving images from:", __dirname + "/app/public/images");
 // Serve static files (this is what allows images to load)
-app.use('/images',express.static(__dirname + "/public"));
+app.use('/images',express.static(__dirname + "/app/public/images"));
 
 //Router
 require("./app/routing/apiRoutes.js")(app);
