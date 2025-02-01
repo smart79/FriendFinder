@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve static files (this is what allows images to load)
-app.use(express.static(__dirname + "/public"));
+app.use('/images',express.static(__dirname + "/public"));
 
 //Router
 require("./app/routing/apiRoutes.js")(app);
